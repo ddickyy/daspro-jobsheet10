@@ -4,13 +4,20 @@ public class SIAKAD08 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int [][] nilai = new int [4][3];
+        
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = sc.nextInt();
+        System.out.print("Masukkan jumlah mata kuliah: ");
+        int mata_kuliah = sc.nextInt();
 
-        for (int i = 0; i<nilai.length; i++){
+        int [][] nilai = new int [jumlah][mata_kuliah];
+
+
+        for (int i = 0; i < jumlah; i++){
             System.out.println("Input nilai Mahasiswa ke-" +(i+1));
             double totalPerSiswa = 0;
 
-            for (int j = 0; j<nilai[i].length; j++) {
+            for (int j = 0; j<mata_kuliah; j++) {
                 System.out.print("Nilai mata kuliah " + (j+1) + ": ");
                 nilai [i][j] = sc.nextInt();
                 totalPerSiswa += nilai[i][j];
